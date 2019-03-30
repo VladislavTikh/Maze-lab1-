@@ -85,7 +85,7 @@ namespace Lab
             {
                 Cell cellBossToMove = null;
                 var options = GetNearCell<Cell>(this[_boss.X, _boss.Y]).Where(x=>!(x is Wall));
-                cellBossToMove = options.LastOrDefault();//ElementAt(randomizer.Next(0, options.Count-1));
+                cellBossToMove = options.ElementAt(randomizer.Next(0, options.Count()-1));
                 if (cellBossToMove != null)
                 {
                     ReplaceWithGround(this[_boss.X, _boss.Y]);
@@ -93,6 +93,7 @@ namespace Lab
                 }
             }
         }
+
         private List<T> GetNearCell<T>(Cell cellToRemove) where T : Cell
         {
             var nearCells = new List<Cell>();

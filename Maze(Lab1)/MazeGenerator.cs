@@ -39,7 +39,7 @@ namespace Lab
         public Maze GetLabirinth()
         {
             _maze = new Maze(Width, Height);
-            Step(_maze.Cells[0]);
+            CreatePathes();
             SetCharges();
             SpawnBoss();
             return _maze;
@@ -66,7 +66,10 @@ namespace Lab
                 _maze[randGround.X, randGround.Y] = new Charge(randGround.X, randGround.Y);
             }
         }
-
+        private void CreatePathes()
+        {
+            Step(_maze.Cells[0]);
+        }
         private void Step(Cell cellToRemove)
         {
             _maze[cellToRemove.X, cellToRemove.Y] = new Ground(cellToRemove.X, cellToRemove.Y);
