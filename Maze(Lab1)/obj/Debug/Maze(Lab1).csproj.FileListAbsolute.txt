@@ -4,4 +4,3 @@ C:\Users\lenovo\Desktop\учеба\myprojects\Maze(Lab1)\Maze(Lab1)\bin\Debug\Ma
 C:\Users\lenovo\Desktop\учеба\myprojects\Maze(Lab1)\Maze(Lab1)\obj\Debug\Maze(Lab1).csproj.CoreCompileInputs.cache
 C:\Users\lenovo\Desktop\учеба\myprojects\Maze(Lab1)\Maze(Lab1)\obj\Debug\Maze(Lab1).exe
 C:\Users\lenovo\Desktop\учеба\myprojects\Maze(Lab1)\Maze(Lab1)\obj\Debug\Maze(Lab1).pdb
-C:\Users\lenovo\Desktop\учеба\myprojects\Maze(Lab1)\Maze(Lab1)\obj\Debug\Maze(Lab1).csprojAssemblyReference.cache

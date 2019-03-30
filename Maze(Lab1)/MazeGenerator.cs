@@ -44,6 +44,9 @@ namespace Lab
             SpawnBoss();
             return _maze;
         }
+        /// <summary>
+        /// places boss in maze
+        /// </summary>
         private void SpawnBoss()
         {
             var randCell= GetRandomCell(_maze.Cells.OfType<Ground>().ToList());
@@ -51,7 +54,9 @@ namespace Lab
             _maze._boss = boss;
             _maze[randCell.X, randCell.Y] = _maze._boss;
         }
-
+        /// <summary>
+        /// randomly sets charges in maze
+        /// </summary>
         private void SetCharges()
         {
             var count=rand.Next(4, 8);

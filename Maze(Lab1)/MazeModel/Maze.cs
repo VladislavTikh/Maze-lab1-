@@ -84,10 +84,13 @@ namespace Lab
             if (!_boss.isDead)
             {
                 Cell cellBossToMove = null;
-                var options = GetNearCell<Ground>(this[_boss.X, _boss.Y]);
+                var options = GetNearCell<Cell>(this[_boss.X, _boss.Y]).Where(x=>!(x is Wall));
                 cellBossToMove = options.LastOrDefault();//ElementAt(randomizer.Next(0, options.Count-1));
-                ReplaceWithGround(this[_boss.X, _boss.Y]);
-                _boss=BossSteps(this[cellBossToMove.Y, cellBossToMove.Y]) as Enemy;
+                if (cellBossToMove != null)
+                {
+                    ReplaceWithGround(this[_boss.X, _boss.Y]);
+                    _boss = BossSteps(this[cellBossToMove.Y, cellBossToMove.Y]) as Enemy;
+                }
             }
         }
         private List<T> GetNearCell<T>(Cell cellToRemove) where T : Cell
