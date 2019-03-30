@@ -89,7 +89,7 @@ namespace Lab
                 if (cellBossToMove != null)
                 {
                     ReplaceWithGround(this[_boss.X, _boss.Y]);
-                    _boss = BossSteps(this[cellBossToMove.Y, cellBossToMove.Y]) as Enemy;
+                    _boss = BossSteps(this[cellBossToMove.X, cellBossToMove.Y]) as Enemy;
                 }
             }
         }
